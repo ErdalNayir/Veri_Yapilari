@@ -5,7 +5,7 @@
 #include "VeriYapilariSoru_4.h"
 #include "VeriYapilariSoru_2.h"
 #include "VeriYapilariSoru_1.h"
-
+#include"RussianPeasant.h"
 # define N 12456
 
 
@@ -57,12 +57,21 @@ int main()
 
 
 
-    // 4.SORU CEVAP KISMI
+    /* 4.SORU CEVAP KISMI
     printf("Input: %d\n\n",N);
     printf("Output: ");
     CarpanlarinaAyir(N,2);
     printf("\n");
+    */
+    
+    
+    
+    /* Russian Peasant 
+    int Toplam;
 
+    Toplam=RussianPeasant(12,25,0);
+    printf("Sonuc: %d\n\n",Toplam);
+    */
 
 
 
