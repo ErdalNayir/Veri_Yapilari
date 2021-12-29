@@ -6,8 +6,25 @@
 #include "VeriYapilariSoru_2.h"
 #include "VeriYapilariSoru_1.h"
 #include"RussianPeasant.h"
-# define N 12456
+#include"Stack.h"
 
+#define N 10
+
+bool YansimaliMi(STACK* stack, char liste[]){
+    for(int i=0; i<N; i++){
+        if(liste[i]=='{' || liste[i]=='('){
+            push(stack,liste[i]);
+        }
+        else{
+            void* dataToCompare;
+            dataToCompare=pop(stack);
+            if(dataToCompare=='{' && liste[i]!='}' || dataToCompare=='(' && liste[i]!=')'){
+                return false;
+            }
+        }
+    }
+    return true;
+}
 
 
 int main()
@@ -73,7 +90,23 @@ int main()
     printf("Sonuc: %d\n\n",Toplam);
     */
 
+    
+    
+    /*char problem solved with stack data structure
+    STACK* stack = createStack();
 
+    char parantezler[N]={'(','{','(','(','(',')',')',')','}',')'};
+
+    bool result;
+    result=YansimaliMi(stack,parantezler);
+
+    if(result){
+        printf("Evet Yansimali\n\n");
+    }
+    else{
+        printf("Hayir Yansimasiz\n\n");
+    }
+    */
 
 
 }
